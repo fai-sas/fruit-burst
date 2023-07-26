@@ -1,0 +1,67 @@
+.bg-img-1 {
+  background-image: linear-gradient(
+      180deg,
+      #121212 0%,
+      rgba(18, 18, 18, 0) 100%
+    ),
+    url('./assets/banner1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+}
+
+.bg-img-2 {
+  background-image: linear-gradient(
+      180deg,
+      #121212 0%,
+      rgba(18, 18, 18, 0) 100%
+    ),
+    url('./assets/banner2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+}
+
+.bg-img-3 {
+  background-image: linear-gradient(
+      180deg,
+      #121212 0%,
+      rgba(18, 18, 18, 0) 100%
+    ),
+    url('./assets/banner3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+}
+
+.bg-img-4 {
+  background-image: linear-gradient(
+      180deg,
+      #121212 0%,
+      rgba(18, 18, 18, 0) 100%
+    ),
+    url('./assets/banner4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+}
+
+.card-border {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(18, 18, 18, 0.1);
+  background: #fff;
+}
+
+.team-img {
+  background-image: url('/assets/team.png');
+  /* background: rgba(18, 18, 18, 0.7); */
+  background-blend-mode: overlay;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+}
