@@ -57,7 +57,7 @@
 }
 
 .team-img {
-  background-image: url('/assets/team.png');
+  background-image: url('./assets/team.png');
   /* background: rgba(18, 18, 18, 0.7); */
   background-blend-mode: overlay;
   background-position: center;
