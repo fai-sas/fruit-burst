@@ -76,19 +76,21 @@
         </label>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 -left-[120px] right-0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 -left-[150px] right-0"
         >
           <li><a>Home</a></li>
           <li><a>About Us</a></li>
           <li><a>Shop</a></li>
           <li><a>All Fruits</a></li>
-          <div class="form-control">
-            <div class="input-group">
-              <input type="text" placeholder="Search here…" class="input" />
-              <!-- <button class="bg-white border-white btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button> -->
-            </div>
+          <div class="relative w-40 my-2 form-control">
+            <input
+              type="text"
+              placeholder="Search here"
+              class="rounded-3xl input focus:text-[#F85559] focus:font-bold"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute right-4 bottom-3 text-base text-[#121212]"
+            ></i>
           </div>
         </ul>
       </div>
@@ -117,13 +119,15 @@
         </article>
 
         <!-- third column -->
-        <div class="form-control">
-          <div class="input-group">
-            <input type="text" placeholder="Search here…" class="input" />
-            <button class="bg-white border-white btn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
+        <div class="relative form-control w-96">
+          <input
+            type="text"
+            placeholder="Search here"
+            class="rounded-3xl input focus:text-[#F85559] focus:font-bold"
+          />
+          <i
+            class="fa-solid fa-magnifying-glass absolute right-4 bottom-3 text-base text-[#121212]"
+          ></i>
         </div>
       </section>
     </nav>
