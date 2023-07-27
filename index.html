@@ -44,65 +44,90 @@
     </style>
   </head>
   <body class="">
-    <!-- navbar -->
-    <nav class="container px-8 mx-auto">
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
-            </ul>
+    <!-- mobile nav -->
+    <nav
+      class="container flex items-center justify-between px-8 mx-auto my-8 lg:hidden"
+    >
+      <!-- first column -->
+      <article class="flex items-center gap-4">
+        <img src="./assets/logo.png" alt="" />
+        <a
+          class="text-2xl font-bold normal-case cursor-pointer hover:text-[#F85559] lg:text-4xl"
+          >Fruit Burst</a
+        >
+      </article>
+      <!-- second column -->
+      <div class="dropdown">
+        <label tabindex="0" class="cursor-pointer hover:text-[#F85559]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-12 h-12"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </label>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 -left-[120px] right-0"
+        >
+          <li><a>Home</a></li>
+          <li><a>About Us</a></li>
+          <li><a>Shop</a></li>
+          <li><a>All Fruits</a></li>
+          <div class="form-control">
+            <div class="input-group">
+              <input type="text" placeholder="Search here…" class="input" />
+              <!-- <button class="bg-white border-white btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button> -->
+            </div>
           </div>
-          <a class="text-xl normal-case btn btn-ghost">Fruit Burst</a>
-        </div>
-        <div class="hidden navbar-center lg:flex">
-          <ul class="px-1 menu menu-horizontal">
-            <li><a>Item 1</a></li>
-            <li tabindex="0">
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
-        <div class="navbar-end">
-          <a class="btn">Button</a>
-        </div>
+        </ul>
       </div>
     </nav>
-    <!-- end of navbar -->
+    <!-- end of mobile nav -->
+
+    <!-- desktop nav  -->
+    <nav class="hidden lg:block">
+      <section
+        class="container flex justify-between items-center mx-auto my-8 py-2 text-white rounded-3xl bg-[#F85559]"
+      >
+        <!-- first column -->
+        <ul class="pl-4 text-lg text-white menu menu-horizontal">
+          <li><a>Home</a></li>
+          <li><a>About Us</a></li>
+          <li><a>Shop</a></li>
+          <li><a>All Fruits</a></li>
+        </ul>
+
+        <!-- second column -->
+        <article class="flex items-center">
+          <img src="./assets/logo.png" alt="" />
+          <a class="text-2xl font-bold normal-case lg:text-4xl btn btn-ghost"
+            >Fruit Burst</a
+          >
+        </article>
+
+        <!-- third column -->
+        <div class="pr-4 form-control">
+          <div class="input-group">
+            <input type="text" placeholder="Search here…" class="input" />
+            <button class="bg-white border-white btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <!-- end of desktop nav -->
 
     <!-- banner section -->
     <section class="container px-8 mx-auto">
@@ -122,7 +147,7 @@
                   We supply highly quality organic products
                 </p>
                 <button
-                  class="py-5 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:text-xl px-7 bg-colorPrimary"
+                  class="px-4 py-2 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:py-5 lg:text-xl lg:px-7 bg-colorPrimary"
                 >
                   Shop Now
                 </button>
@@ -153,7 +178,7 @@
                   We supply highly quality organic products
                 </p>
                 <button
-                  class="py-5 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:text-xl px-7 bg-colorPrimary"
+                  class="px-4 py-2 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:py-5 lg:text-xl lg:px-7 bg-colorPrimary"
                 >
                   Shop Now
                 </button>
@@ -183,7 +208,7 @@
                   We supply highly quality organic products
                 </p>
                 <button
-                  class="py-5 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:text-xl px-7 bg-colorPrimary"
+                  class="px-4 py-2 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:py-5 lg:text-xl lg:px-7 bg-colorPrimary"
                 >
                   Shop Now
                 </button>
@@ -213,7 +238,7 @@
                   We supply highly quality organic products
                 </p>
                 <button
-                  class="py-5 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:text-xl px-7 bg-colorPrimary"
+                  class="px-4 py-2 mt-5 mb-5 text-lg font-extrabold text-white border-0 rounded-lg lg:py-5 lg:text-xl lg:px-7 bg-colorPrimary"
                 >
                   Shop Now
                 </button>
@@ -286,7 +311,7 @@
         </header>
         <!-- countdown -->
         <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
-          <article class="flex items-center">
+          <article class="flex items-center gap-2">
             <div class="flex flex-col items-center">
               <span
                 class="font-mono text-3xl font-extrabold lg:text-5xl countdown"
@@ -295,10 +320,12 @@
               </span>
               days
             </div>
-            <img " src="./assets/frame.svg" alt="" />
+            <div>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
 
-          <article class="flex items-center">
+          <article class="flex items-center gap-2">
             <div class="flex flex-col items-center">
               <span
                 class="font-mono text-3xl font-extrabold lg:text-5xl countdown"
@@ -307,10 +334,12 @@
               </span>
               hours
             </div>
-            <img " src="./assets/frame.svg" alt="" />
+            <div>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
 
-          <article class="flex items-center">
+          <article class="flex items-center gap-2">
             <div class="flex flex-col items-center">
               <span
                 class="font-mono text-3xl font-extrabold lg:text-5xl countdown"
@@ -319,7 +348,9 @@
               </span>
               minutes
             </div>
-            <img " src="./assets/frame.svg" alt="" />
+            <div>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </article>
 
           <article class="flex items-center">
@@ -354,35 +385,58 @@
             <hr class="mt-4" />
             <p class="py-4">Apples</p>
             <div class="justify-center card-actions">
-              <div class="rating rating-md">
-                <div class="rating rating-md">
-                  <input
-                    type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
-                    checked
-                  />
-                  <input
-                    type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
-                  />
-                </div>
+              <div class="rating rating-lg rating-half">
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-orange-400 mask mask-star-2 mask-half-2"
+                />
               </div>
             </div>
             <p class="pt-4 cursor-pointer font-bold text-lg text-[#F85559]">
@@ -494,32 +548,57 @@
             <p class="py-4">Orange</p>
             <div class="justify-center card-actions">
               <div class="rating rating-md">
-                <div class="rating rating-md">
+                <div class="rating rating-lg rating-half">
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                     checked
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-1"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
                   />
                 </div>
               </div>
@@ -548,53 +627,53 @@
                   <div class="rating rating-lg rating-half">
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-1"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-2"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-1"
                       checked
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-2"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-1"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-2"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-1"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-2"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-1"
                     />
                     <input
                       type="radio"
-                      name="rating-10"
+                      name="rating-3"
                       class="bg-orange-400 mask mask-star-2 mask-half-2"
                     />
                   </div>
@@ -633,32 +712,57 @@
             <p class="py-4">Red Dragon</p>
             <div class="justify-center card-actions">
               <div class="rating rating-md">
-                <div class="rating rating-md">
+                <div class="rating rating-lg rating-half">
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                     checked
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-5"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
                   />
                 </div>
               </div>
@@ -774,32 +878,57 @@
             <p class="py-4">Banana</p>
             <div class="justify-center card-actions">
               <div class="rating rating-md">
-                <div class="rating rating-md">
+                <div class="rating rating-lg rating-half">
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                     checked
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
                   />
                   <input
                     type="radio"
-                    name="rating-7"
-                    class="bg-orange-400 mask mask-star-2"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-4"
+                    class="bg-orange-400 mask mask-star-2 mask-half-2"
                   />
                 </div>
               </div>
